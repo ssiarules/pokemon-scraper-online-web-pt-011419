@@ -20,4 +20,10 @@ class Pokemon
     Pokemon.new(id: found_pokemon[0], name: found_pokemon[1], type: found_pokemon[2], db: db)
     #initialize a new pokemon and we are setting the attributes which have been defined as keywords the value found_pokemon[0] is the data we returned in the array after we did a search in our databse.
   end
+
+def alter_hp(new_hp, db)
+  db.execute("UPDATE TABLE pokemon SET hp = ? WHERE id  = ?;", new_hp, self.id)
+  #what is the keyword if we want to change data in our database in a column UPDATE TABLE
+end
+
 end
