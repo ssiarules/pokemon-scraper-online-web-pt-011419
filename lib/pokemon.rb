@@ -17,7 +17,7 @@ class Pokemon
     #find pokemon by id
     #return a new pokemon object
     found_pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?;", id).flatten
-    binding.pry
+
 
   end
 end
