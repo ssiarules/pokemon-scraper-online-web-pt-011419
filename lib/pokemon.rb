@@ -22,8 +22,8 @@ class Pokemon
   end
 
 def alter_hp(new_hp, db)
-  db.execute("UPDATE TABLE pokemon SET hp = ? WHERE id  = ?;", new_hp, self.id)
-  #what is the keyword if we want to change data in our database in a column UPDATE TABLE
+  db.execute("UPDATE pokemon SET hp = ? WHERE id  = ?;", new_hp, self.id) #how will you get the id? because we are dealing with the instance of the pokemon and it will recognize each instance self.id and return the id of that instance.
+  #what is the keyword if we want to change data in our database in a column UPDATE
 end
 
 end
